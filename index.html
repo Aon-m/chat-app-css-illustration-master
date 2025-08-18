@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Aon</title>
+  </head>
+  <body>
+    <main>
+      <div class="purple-bg-design"></div>
+      <section class="phone">
+        <div class="phone__notch"></div>
+        <div class="chat">
+          <div class="chat__header">
+            <img
+              src="assets/images/avatar.jpg"
+              alt="Profile Picture"
+              class="chat__avatar"
+            />
+            <h2 class="chat__contact-name">Samuel Green</h2>
+            <p class="chat__contact-description">Available to Walk</p>
+          </div>
+          <div class="chat__messages">
+            <p class="chat__message chat__messages--received">
+              That sounds great. I’d be happy with that.
+            </p>
+            <p class="chat__message chat__messages--received">
+              Could you send over some pictures of your dog, please?
+            </p>
+            <div class="chat__attachments">
+              <img
+                src="assets/images/dog-image-1.jpg"
+                alt="Image of a dog"
+                class="chat__images"
+              /><img
+                src="assets/images/dog-image-2.jpg"
+                alt="Image of a dog"
+                class="chat__images"
+              />
+              <img
+                src="assets/images/dog-image-3.jpg"
+                alt="Image of a dog"
+                class="chat__images"
+              />
+            </div>
+            <p class="chat__message chat__messages--sent">
+              Here are a few pictures. She’s a happy girl!
+            </p>
+            <p class="chat__message chat__messages--sent">Can you make it?</p>
+            <p class="chat__message chat__messages--received">
+              She looks so happy! The time we discussed works. How long shall I
+              take her out for?
+            </p>
+            <label class="chat__purchase-option" for="purchase-option-1">
+              <input
+                type="radio"
+                name="dog_walk_duration"
+                id="purchase-option-1"
+                class="chat__purchase-input"
+                value="30min"
+              />
+              30 minute walk <span class="chat__purchase-price">$29</span>
+            </label>
+
+            <label class="chat__purchase-option" for="purchase-option-2">
+              <input
+                type="radio"
+                name="dog_walk_duration"
+                id="purchase-option-2"
+                class="chat__purchase-input"
+                value="60min"
+              />
+              1 hour walk <span class="chat__purchase-price">$49</span>
+            </label>
+          </div>
+          <div class="chat__input">
+            <input type="text" placeholder="Type a message…" />
+          </div>
+        </div>
+      </section>
+      <section>
+        <h1 class="main-heading">Simple booking</h1>
+        <p class="main-description">
+          Stay in touch with our dog walkers through the chat interface. This
+          makes it easy to discuss arrangements and make bookings. Once the walk
+          has been completed you can rate your walker and book again all through
+          the chat.
+        </p>
+      </section>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor ↗</a
+        >
+        Coded by
+        <a href="https://github.com/Aon-m" target="_blank">Aon ↗</a>.
+      </div>
+    </footer>
+  </body>
+</html>
