@@ -4,89 +4,100 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
+    <link rel="stylesheet" href="styles/styles.css" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
     <title>Frontend Mentor | Aon</title>
   </head>
   <body>
+    <div class="bg-design">
+      <div class="bg-design--purple"></div>
+      <div class="bg-design--purple bg-design--purple-light"></div>
+    </div>
     <main>
-      <div class="purple-bg-design"></div>
       <section class="phone">
-        <div class="phone__notch"></div>
-        <div class="chat">
-          <div class="chat__header">
+        <div class="chat__header">
+          <div class="phone__notch"></div>
+          <div class="flex-row">
             <img
               src="assets/images/avatar.jpg"
               alt="Profile Picture"
               class="chat__avatar"
             />
-            <h2 class="chat__contact-name">Samuel Green</h2>
-            <p class="chat__contact-description">Available to Walk</p>
-          </div>
-          <div class="chat__messages">
-            <p class="chat__message chat__messages--received">
-              That sounds great. I’d be happy with that.
-            </p>
-            <p class="chat__message chat__messages--received">
-              Could you send over some pictures of your dog, please?
-            </p>
-            <div class="chat__attachments">
-              <img
-                src="assets/images/dog-image-1.jpg"
-                alt="Image of a dog"
-                class="chat__images"
-              /><img
-                src="assets/images/dog-image-2.jpg"
-                alt="Image of a dog"
-                class="chat__images"
-              />
-              <img
-                src="assets/images/dog-image-3.jpg"
-                alt="Image of a dog"
-                class="chat__images"
-              />
+            <div class="flex-column">
+              <h2 class="chat__contact-name">Samuel Green</h2>
+              <p class="chat__contact-description">Available to Walk</p>
             </div>
-            <p class="chat__message chat__messages--sent">
-              Here are a few pictures. She’s a happy girl!
-            </p>
-            <p class="chat__message chat__messages--sent">Can you make it?</p>
-            <p class="chat__message chat__messages--received">
-              She looks so happy! The time we discussed works. How long shall I
-              take her out for?
-            </p>
-            <label class="chat__purchase-option" for="purchase-option-1">
-              <input
-                type="radio"
-                name="dog_walk_duration"
-                id="purchase-option-1"
-                class="chat__purchase-input"
-                value="30min"
-              />
-              30 minute walk <span class="chat__purchase-price">$29</span>
-            </label>
-
-            <label class="chat__purchase-option" for="purchase-option-2">
-              <input
-                type="radio"
-                name="dog_walk_duration"
-                id="purchase-option-2"
-                class="chat__purchase-input"
-                value="60min"
-              />
-              1 hour walk <span class="chat__purchase-price">$49</span>
-            </label>
           </div>
+        </div>
+        <div class="chat">
+          <p class="chat__message chat__message--received">
+            That sounds great. I’d be happy with that.
+          </p>
+          <p class="chat__message chat__message--received">
+            Could you send over some pictures of your dog, please?
+          </p>
+          <div class="chat__attachments flex-row">
+            <img
+              src="assets/images/dog-image-1.jpg"
+              alt="Image of a dog"
+              class="chat__images"
+            /><img
+              src="assets/images/dog-image-2.jpg"
+              alt="Image of a dog"
+              class="chat__images"
+            />
+            <img
+              src="assets/images/dog-image-3.jpg"
+              alt="Image of a dog"
+              class="chat__images"
+            />
+          </div>
+          <p class="chat__message chat__message--sent">
+            Here are a few pictures. She’s a happy girl!
+          </p>
+          <p class="chat__message chat__message--sent">Can you make it?</p>
+          <p class="chat__message chat__message--received">
+            She looks so happy! The time we discussed works. How long shall I
+            take her out for?
+          </p>
+          <label class="chat__purchase-option" for="purchase-option-1">
+            <input
+              type="radio"
+              name="dog_walk_duration"
+              id="purchase-option-1"
+              class="chat__purchase-input"
+              value="30min"
+            />
+            30 minute walk <span class="chat__purchase-price">$29</span>
+          </label>
+
+          <label class="chat__purchase-option" for="purchase-option-2">
+            <input
+              type="radio"
+              name="dog_walk_duration"
+              id="purchase-option-2"
+              class="chat__purchase-input"
+              value="60min"
+            />
+            1 hour walk <span class="chat__purchase-price">$49</span>
+          </label>
           <div class="chat__input">
             <input type="text" placeholder="Type a message…" />
           </div>
         </div>
       </section>
-      <section>
+      <section class="main-content">
         <h1 class="main-heading">Simple booking</h1>
         <p class="main-description">
           Stay in touch with our dog walkers through the chat interface. This
