@@ -28,13 +28,11 @@
   /* Gradients */
   --color-gradient-start-primary: hsl(293, 100%, 63%); /* pink 500 */
   --color-gradient-end-primary: hsl(264, 100%, 61%); /* purple 500 */
-  --color-gradient-start-secondary: hsl(0, 100%, 100%); /* white */
-  --color-gradient-end-secondary: hsl(270, 20%, 96%); /* gray 100 */
   /* Font size */
   --font-chat-normal: clamp(0.4rem, calc(0.4rem + 0.2vw), 0.5rem);
   --font-chat-large: clamp(0.6rem, calc(0.6rem + 0.2vw), 0.7rem);
-  --font-main-normal: clamp(0.7rem, calc(0.7rem + 0.2vw), 0.8rem);
-  --font-main-large: clamp(1.5rem, calc(2.5rem - 1vw), 2.5rem);
+  --font-main-normal: clamp(0.7rem, calc(0.7rem + 1vw), 1rem);
+  --font-main-large: clamp(1.5rem, calc(1.5rem + 1vw), 2.5rem);
 }
 
 body {
@@ -42,12 +40,12 @@ body {
   grid-template: "main" 1fr "footer" auto/1fr;
   justify-content: center;
   min-height: 100vh;
-  background-color: linear-gradient(to bottom, var(--color-gradient-start-secondary), var(--color-gradient-end-secondary));
   /* Font */
   font-family: "Rubik", sans-serif;
 }
 
 main {
+  padding-block: 3rem;
   grid-area: main;
 }
 
@@ -55,31 +53,19 @@ footer {
   grid-area: footer;
 }
 
-.bg-design {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: space-between;
-  z-index: -1;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
 .bg-design--purple {
+  position: absolute;
+  z-index: -1;
   background: linear-gradient(to left, var(--color-gradient-start-primary), var(--color-gradient-end-primary));
-  margin-inline-start: -50%;
-  margin-block-start: -5%;
-  width: clamp(20rem, 100%, 30rem);
-  height: clamp(20rem, 95%, 30rem);
+  width: 40%;
+  height: 70%;
   border-radius: 0 0 20rem 0;
 }
 .bg-design--purple-light {
   background: var(--color-bg-chat-left);
-  margin-inline-end: -50%;
-  margin-block-end: -10%;
   transform: rotate(180deg);
   align-self: flex-end;
+  justify-self: flex-end;
 }
 
 .phone {
@@ -87,12 +73,13 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: min(70vw, 15rem);
+  width: clamp(15rem, 15rem + 0.2vw, 18rem);
   background: var(--color-bg-app);
   border-radius: clamp(1.2rem, 1.2rem + 0.2vw, 1.5rem);
   overflow: hidden;
   border: 0.5rem solid var(--color-bg-white);
-  box-shadow: 1rem 1rem 2rem rgba(41, 31, 31, 0.1), inset 0 0 0.1rem 0.1rem rgba(0, 0, 0, 0.041);
+  margin-block-end: 3rem;
+  box-shadow: 0 1rem 2rem rgba(41, 31, 31, 0.269), inset 0 0 0.1rem 0.1rem rgba(0, 0, 0, 0.041);
 }
 .phone__notch {
   margin-block-start: -1rem;
@@ -200,25 +187,24 @@ footer {
 }
 
 .main-content {
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  margin-inline: 2rem;
+  max-width: clamp(30ch, 30ch + 2vw, 45ch);
 }
 
 .main-heading {
   color: var(--color-text-heading);
   font-size: var(--font-main-large);
-  margin-block: clamp(2rem, 2rem + 0.5vw, 4rem) 1rem;
+  margin-block-end: 1rem;
 }
 
 .main-description {
-  margin-inline: auto;
   color: var(--color-text-paragraph);
   font-size: var(--font-main-normal);
   line-height: 1.7;
-  width: clamp(30ch, 30ch + 30vw, 45ch);
-}
-
-footer {
-  margin-block-start: 3rem;
 }
 
 .attribution {
@@ -247,14 +233,12 @@ footer {
 
 @media screen and (min-width: 45rem) {
   .bg-design--purple {
-    margin-inline-start: -20%;
-    width: clamp(15rem, 45%, 100rem);
-    height: clamp(15rem, 80%, 150rem);
+    margin-inline-start: -5%;
+    width: clamp(15rem, 15rem + 5vw, 100rem);
     border-radius: 0 0 100rem 100rem;
   }
   .bg-design--purple-light {
-    margin-inline-end: -20%;
-    margin-block-end: -5%;
+    margin-inline-end: -5%;
   }
   main {
     min-width: 100%;
@@ -262,23 +246,21 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 4%;
+    gap: 3%;
   }
   .main-content {
     text-align: left;
+  }
+  .main-description {
+    justify-self: flex-start;
   }
   footer {
     margin: 0;
   }
 }
-@media screen and (min-width: 60rem) {
+@media screen and (min-width: 55rem) {
   .bg-design--purple {
-    width: clamp(20rem, 35%, 100rem);
-    height: clamp(20rem, 95%, 150rem);
-    margin-inline-start: -5%;
-  }
-  .bg-design--purple-light {
-    margin-inline-end: -5%;
-    margin-block-end: -5%;
+    height: 80%;
+    width: 40%;
   }
 }/*# sourceMappingURL=styles.css.map */
