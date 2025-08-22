@@ -10,28 +10,28 @@
 :root {
   /* Colors */
   /* Text */
-  --color-text-subheading: hsl(276, 100%, 81%); /* purple 300 */
-  --color-text-chat-left: hsl(276, 55%, 52%); /* purple 600 */
-  --color-text-chat-right: hsl(270, 7%, 64%); /* gray 500 */
-  --color-text-placeholder: hsla(206, 7%, 79%, 0.742); /* gray 300 */
-  --color-text-heading: hsl(271, 36%, 24%); /* purple 950 */
-  --color-text-paragraph: hsl(0, 1%, 62%); /* purple 950 */
+  --color-text-subheading: hsl(276, 100%, 81%);
+  --color-text-chat-left: hsl(276, 55%, 52%);
+  --color-text-chat-right: hsl(270, 7%, 64%);
+  --color-text-placeholder: hsla(206, 7%, 79%, 0.742);
+  --color-text-heading: hsl(271, 36%, 24%);
+  --color-text-paragraph: hsl(0, 1%, 62%);
   --color-text-white: hsla(0, 0%, 100%, 0.801);
   /* Backgrounds */
-  --color-bg-chat-left: hsla(276, 100%, 81%, 0.13); /* purple 300 */
+  --color-bg-chat-left: hsla(276, 100%, 81%, 0.13);
   --color-bg-chat-right: hsl(0, 100%, 100%);
-  --color-bg-app: hsl(270, 20%, 96%); /* gray 100 */
-  --color-bg-submit-button: hsl(271, 36%, 24%); /* purple 950 */
-  --color-bg-white: hsl(0, 100%, 100%); /* white */
-  /* Borders / Accents */
-  --color-outline-radio: hsl(289, 100%, 72%); /* pink 400 */
+  --color-bg-app: hsl(270, 20%, 96%);
+  --color-bg-submit-button: hsl(271, 36%, 24%);
+  --color-bg-white: hsl(0, 100%, 100%);
+  /* Borders */
+  --color-outline-radio: hsl(289, 100%, 72%);
   /* Gradients */
-  --color-gradient-start-primary: hsl(293, 100%, 63%); /* pink 500 */
-  --color-gradient-end-primary: hsl(264, 100%, 61%); /* purple 500 */
+  --color-gradient-start-primary: hsl(293, 100%, 63%);
+  --color-gradient-end-primary: hsl(264, 100%, 61%);
   /* Font size */
   --font-chat-normal: clamp(0.4rem, calc(0.4rem + 0.2vw), 0.5rem);
   --font-chat-large: clamp(0.6rem, calc(0.6rem + 0.2vw), 0.7rem);
-  --font-main-normal: clamp(0.7rem, calc(0.7rem + 1vw), 1rem);
+  --font-main-normal: clamp(0.7rem, calc(0.7rem + 0.5vw), 1rem);
   --font-main-large: clamp(1.5rem, calc(1.5rem + 1vw), 2.5rem);
 }
 
@@ -58,7 +58,7 @@ footer {
   z-index: -1;
   background: linear-gradient(to left, var(--color-gradient-start-primary), var(--color-gradient-end-primary));
   width: 40%;
-  height: 70%;
+  height: 80%;
   border-radius: 0 0 20rem 0;
 }
 .bg-design--purple-light {
@@ -100,19 +100,28 @@ footer {
   border-radius: 0.4rem;
   padding: 1rem;
 }
-.phone .chat__header .chat__avatar {
+.phone .chat__contact {
+  display: flex;
+  flex-direction: row;
+}
+.phone .chat__contact__avatar {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
   margin-right: 0.5rem;
   border: 1px solid var(--color-bg-white);
 }
-.phone .chat__header .chat__contact-name {
+.phone .chat__contact__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.phone .chat__contact__name {
   display: inline;
   font-size: var(--font-chat-large);
   color: var(--color-text-white);
 }
-.phone .chat__header .chat__contact-description {
+.phone .chat__contact__description {
   display: inline;
   font-size: var(--font-chat-normal);
   color: var(--color-text-subheading);
@@ -138,6 +147,8 @@ footer {
   border-bottom-right-radius: 0.25rem;
 }
 .phone .chat__attachments {
+  display: flex;
+  flex-direction: row;
   align-self: flex-end;
 }
 .phone .chat__attachments .chat__images {
@@ -194,21 +205,18 @@ footer {
   margin-inline: 2rem;
   max-width: clamp(30ch, 30ch + 2vw, 45ch);
 }
-
-.main-heading {
+.main-content__heading {
   color: var(--color-text-heading);
   font-size: var(--font-main-large);
   margin-block-end: 1rem;
 }
-
-.main-description {
+.main-content__description {
   color: var(--color-text-paragraph);
   font-size: var(--font-main-normal);
   line-height: 1.7;
 }
 
 .attribution {
-  font-family: sans-serif;
   text-align: center;
   font-size: 0.5rem;
   color: var(--color-text-paragraph);
@@ -221,20 +229,9 @@ footer {
   transition: 150ms ease;
 }
 
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.flex-column {
-  display: flex;
-  flex-direction: column;
-}
-
 @media screen and (min-width: 45rem) {
   .bg-design--purple {
-    margin-inline-start: -5%;
-    width: clamp(15rem, 15rem + 5vw, 100rem);
+    margin-inline-start: -10%;
     border-radius: 0 0 100rem 100rem;
   }
   .bg-design--purple-light {
@@ -253,14 +250,5 @@ footer {
   }
   .main-description {
     justify-self: flex-start;
-  }
-  footer {
-    margin: 0;
-  }
-}
-@media screen and (min-width: 55rem) {
-  .bg-design--purple {
-    height: 80%;
-    width: 40%;
   }
 }/*# sourceMappingURL=styles.css.map */
