@@ -42,7 +42,7 @@ Users should be able to:
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/clipboard-landing-page-using-flexbox-HYkimJV2Vj)
-- [Live Site URL](https://aon-m.github.io/clipboard-landing-page-master/)
+- [Live Site URL](https://aon-m.github.io/chat-app-css-illustration-master/)
 
 ## My process
 
