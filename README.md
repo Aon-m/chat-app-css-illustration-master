@@ -41,7 +41,7 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL](https://www.frontendmentor.io/solutions/clipboard-landing-page-using-flexbox-HYkimJV2Vj)
+- [Solution URL](https://www.frontendmentor.io/solutions/responsive-chat-app-illustration-o5U_W7LX1c)
 - [Live Site URL](https://aon-m.github.io/chat-app-css-illustration-master/)
 
 ## My process
